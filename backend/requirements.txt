@@ -1,0 +1,19 @@
+fastapi==0.115.6
+uvicorn[standard]==0.34.0
+pydantic==2.10.4
+pydantic-settings==2.7.1
+sqlmodel==0.0.22
+langgraph==0.2.74
+ollama==0.4.5
+chromadb==0.5.23
+# chromadb declares posthog>=2.4.0 with no upper bound; posthog 4.x+ rewrote capture() to a
+# single-positional-arg signature, so latest posthog silently breaks chromadb's telemetry calls
+# (logs "Failed to send telemetry event ... capture() takes 1 positional argument but 3 were
+# given" on every client/collection creation — harmless but noisy). Pinned to a version whose
+# capture(distinct_id, event, properties=...) signature still matches what chromadb calls.
+posthog==3.7.0
+pypdf==5.1.0
+python-dotenv==1.0.1
+python-multipart==0.0.20
+bcrypt==4.2.1
+pyjwt==2.10.1
