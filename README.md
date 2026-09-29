@@ -1,4 +1,4 @@
-# Code 19 HR Leave Assistant
+# Leave Assistant
 
 A RAG-grounded, multi-agent leave request pipeline built with **LangGraph**, backed by an **Ollama Cloud** LLM,
 for the leave rules defined in `Code 19 Leave Policy 2022.pdf`. Employees interact through a chat interface —
